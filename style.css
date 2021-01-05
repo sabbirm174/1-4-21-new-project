@@ -16,7 +16,78 @@
 .items-center{
     align-items: center;
 }    
-    
+.justify-center{
+    justify-content: center;
+}
+
+.magic-shadow{
+    position:relative;
+    background: var(--heaven);
+}
+.magic-shadow:after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height:69px;
+    background-image: url(icons/shadow.svg);
+    background-repeat: no-repeat;
+    bottom:-18px;
+    z-index: -1;
+    background-position: center;
+}
+
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    border:1px solid transparent;
+}
+
+.btn-primary{
+    color:var(--heaven);
+    background: var(--primary);
+}
+.btn-primary:hover{
+    color:var(--primary);
+    background: var(--heaven);
+    border: 1px solid var(--primary);
+}
+.btn-secondery:hover{
+    color:var(--secondary);
+    background: var(--heaven);
+    border:1px solid var(--secondary)
+}
+.btn-secondery{
+    color:var(--heaven);
+    background: var(--secondary);
+}
+
+.section-header{
+    font-family: raleway-bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.section-header:after{
+    content: "";
+    position: absolute;
+    height: 30px;
+    display: block;
+    width: 100%;
+    background-image: url(icons/hr.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: -40px;
+}
+
+.text-center{
+    text-align: center;
+}
+
 /*utility-section-end*/ 
 
 /*body-start*/
@@ -25,6 +96,7 @@ body{
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
+    height: 5000px;
 }
 /* body-end*/
 
@@ -43,11 +115,15 @@ body{
 }
 @font-face {
     font-family: "Raleway-semibold";
-    src: url(fonts/Raleway-semiBold.ttf);
+    src: url(fonts/Raleway-SemiBold.ttf);
 }
 @font-face {
     font-family: "Raleway-black";
     src: url(fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: "Raleway-extrabold";
+    src: url(fonts/Raleway-ExtraBold.ttf);
 }
 /*******************font-family-end****************/
 
@@ -105,13 +181,203 @@ header.topbar{
     background: var(--secondary);
     color:var(--pure);
     font-family:"Raleway-semibold";
+    padding:0.75rem 0;
 
+}
+header.topbar .icons a{
+    margin-right: 0.6rem;
 }
 header.topbar .auth > div a{
     color:var(--pure);
     text-decoration:none;
 }
+header.topbar .auth > div img{
+    margin-right: 0.35rem;
+}
+header.topbar .auth .divider{
+    margin: 0 1rem;
+}
 /*******************topbar-end****************/
+
+/*******************nav-bar-start****************/
+nav .top{
+    margin:1.25rem 0;
+}
+nav .top .container .contact img, nav .top .container .time img{
+    margin-right:1rem ;
+}
+nav .top .container .contact h5,nav .top .container .time h5{
+    font-family:raleway-black;
+    margin-bottom:0.25rem ;
+}
+nav .top .container .contact h6,nav .top .container .time h6{
+    font-family:raleway-medium;
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color:var(--ternary);
+}
+
+nav .menu a{
+    text-decoration: none;
+    font-family: raleway-semibold;
+    padding:1rem 1.25rem;
+    font-size: 1rem;
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+nav .menu a.active{
+    background: var(--primary);
+}
+nav .menu a:hover{
+    background: var(--primary);
+}
+/*******************nav-bar-end****************/
+
+/*******************hero-start****************/
+header.hero{
+    height: 600px;
+    background-image: url(images/hero.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+header.hero .container{
+    position: relative;
+}
+
+header.hero .welcome{
+    margin-bottom: .25rem;
+}
+header.hero .welcome span{
+    font-family: raleway-bold;
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+header.hero h1{
+    font-family: raleway-extrabold;
+    color: var(--secondary);
+    font-size:2.5rem;
+    margin-bottom: 0.75rem;
+}
+header.hero h1 span{
+    color:var(--primary);
+}
+header.hero p{
+    font-family:raleway-medium;
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+header.hero button:first-child{
+    margin-right: .75rem;
+}
+
+header.hero .hero-image{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+
+/*******************hero-end****************/
+
+section{
+    padding: 4rem 0;
+}
+section.top-products{
+    background: var(--light);
+}
+section.top-products .food-slider .food-cart{
+    background:var(--heaven);
+    padding : 1.5rem 0;
+    border-radius:4px;
+}
+section.top-products .food-slider .food-cart .product-image img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom:1rem ;
+}
+hr{
+    border:1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-cart h2{
+    font-family: raleway-bold;
+    font-size: 1.2rem;
+    margin-bottom: .25rem;
+}
+section.top-products .food-slider .food-cart .stars{
+    margin-bottom: .5rem;
+}
+section.top-products .food-slider .food-cart .stars img{
+    margin-right: .25rem;
+}
+section.top-products .food-slider .food-cart .price{
+    font-family: raleway-medium;
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-cart button{
+    font-family: raleway-medium;
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    background: var(--heaven);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    width: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+section.top-products .food-slider .food-cart button:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+section.top-products .food-slider .food-cart button img{
+    background: var(--primary);
+    padding: .5rem;
+    height: 32px;
+    margin-right: 1.2rem;
+
+}
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin: 0 -27px;
+}
+section.top-products{
+    position: relative;
+}
+section.top-products .slider-btn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--primary) ;
+    cursor: pointer;
+    outline: none;
+
+}
+section.top-products .prev-btn{
+    position: absolute;
+    top: 54%;
+    z-index: 1;
+    left: 2%;
+}
+section.top-products .next-btn{
+    position: absolute;
+    top: 54%;
+    z-index: 1;
+    right: 2%;
+}
+.btn-wraper{
+    margin-top: 2rem;
+}
+
+
+
 
 
 
