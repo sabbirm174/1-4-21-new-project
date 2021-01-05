@@ -1,22 +1,52 @@
-/* font-family*/
+/*reset-start*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+/*reset-end*/ 
+
+/*utility-section-start*/ 
+.flex{
+    display:flex;
+}
+.justify-between{
+    justify-content:space-between;
+}
+.items-center{
+    align-items: center;
+}    
+    
+/*utility-section-end*/ 
+
+/*body-start*/
+body{
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+/* body-end*/
+
+/* font-family-start*/
  @font-face {
-     font-family: "Railway-regular";
+     font-family: "Raleway-regular";
      src: url(fonts/Raleway-Regular.ttf);
  }
  @font-face {
-    font-family: "Railway-medium";
+    font-family: "Raleway-medium";
     src: url(fonts/Raleway-Medium.ttf);
 }
 @font-face {
-    font-family: "Railway-bold";
+    font-family: "Raleway-bold";
     src: url(fonts/Raleway-Bold.ttf);
 }
 @font-face {
-    font-family: "Railway-semibold";
+    font-family: "Raleway-semibold";
     src: url(fonts/Raleway-semiBold.ttf);
 }
 @font-face {
-    font-family: "Railway-black";
+    font-family: "Raleway-black";
     src: url(fonts/Raleway-Black.ttf);
 }
 /*******************font-family-end****************/
@@ -62,12 +92,26 @@
 }
 /*******************@mediquery-end****************/
 
-container{
+/*******************container-start****************/
+.container{
     width:100%;
     padding:0 15px;
     margin: 0 auto;
 }
+/*******************container-end****************/
 
+/*******************topbar-start****************/
+header.topbar{
+    background: var(--secondary);
+    color:var(--pure);
+    font-family:"Raleway-semibold";
+
+}
+header.topbar .auth > div a{
+    color:var(--pure);
+    text-decoration:none;
+}
+/*******************topbar-end****************/
 
 
 
